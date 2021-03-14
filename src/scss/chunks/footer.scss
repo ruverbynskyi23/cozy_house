@@ -1,0 +1,50 @@
+@import '../constants.scss';
+@import '../mixins.scss';
+
+
+.footer {
+  padding: 89px 0 70px;
+  background-image: url('../assets/bg_footer.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    @include container;
+    display: flex;
+  }
+
+  .contact_block {
+    margin-right: 175px;
+    
+    .list_item:first-child {
+      margin-bottom: 34px;
+    }
+  }
+
+  .title {
+    @include title;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+    color: $white;
+    margin-bottom: 34px;
+  }
+
+  .list_item {
+    display: flex;
+    align-items: center;
+    font-family: $Times;
+
+    &:first-child {
+      margin-bottom: 23px;
+    }
+
+    .item_caption {
+      display: block;
+      margin-left: 21px;
+
+      @include text(20px, 25px, $pale-pink);
+      letter-spacing: 0.06em;
+    }
+  }
+}

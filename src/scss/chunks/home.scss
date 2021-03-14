@@ -1,0 +1,286 @@
+@import '../constants.scss';
+@import '../mixins.scss';
+
+.main {
+
+  .intro {
+    padding-top: 364px;
+    background-image: url('../assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+
+    .container {
+      @include container;
+    }
+
+    .title {
+      @include title(44px, 57px, $white);
+      font-family: $Georgia;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+
+      margin-bottom: 46px;
+    }
+
+    .text {
+      @include text;
+      font-family: $Arial;
+      color: $pale-grey;
+
+      max-width: 470px;
+      margin-bottom: 47px;
+    }
+
+    .btn {
+      @include btn;
+
+      padding: 21px 44px;
+      margin-bottom: 269px;
+      background-color: #fafafa;
+
+      transition: background-color .3s ease;
+    }
+  }
+
+
+  .about {
+    padding-top: 89px;
+    margin-bottom: 106px;
+  
+    .container {
+      @include container;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .section_img {
+      margin-right: 109px;
+    }
+    
+    .text_content {
+      max-width: 430px;
+    }
+  
+    .title {
+      @include title;
+      font-family: $Georgia;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      margin-bottom: 37px;
+    }
+  
+    .section-text {
+      @include text;
+      font-family: $Arial;
+
+      &:nth-child(2) {
+        margin-bottom: 34px;
+      }
+    }
+  }
+
+  .friends {
+    padding-top: 78px;
+    background-color: #f6f6f6;
+    
+    .container {
+      @include container;
+      padding: 0 130px;
+      text-align: center
+    }
+
+    .title {
+      @include title;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      margin-bottom: 66px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 66px;
+
+      position: relative;
+
+      .arrow_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: solid 2px $pale-pink;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: -130px;
+        cursor: pointer;
+
+        transition: background-color .3s ease;
+
+        &:hover {
+          background-color: $pale-pink;
+        }
+      }
+
+      .backward {
+        left: unset;
+        right: -130px;
+
+        transform: rotate(180deg);
+      }
+
+      .card {
+        width: 270px;
+        height: 424px;
+        border-radius: 18px;
+        overflow: hidden;
+        background-color: #fafafa;
+        box-shadow: 0px 2px 30.1px 4.9px rgba(13, 13, 13, 0);
+
+        transition: all .3s ease;
+        
+        &:hover {
+          box-shadow: 0px 2px 30.1px 4.9px rgba(13, 13, 13, 0.04);
+        }
+
+        .card_img {
+          margin-bottom: 24px;
+        }
+
+        .caption {
+          @include text(20px, 45px);
+          letter-spacing: 0.06em;
+        }
+
+        .card_btn {
+          @include btn;
+    
+          padding: 17px 44px 19px;
+
+          transition: background-color .3s ease;
+        }    
+      }
+    }
+
+    .btn {
+      @include btn;
+
+      padding: 21px 44px;
+      margin-bottom: 68px;
+
+      transition: background-color .3s ease;
+    }
+  }
+
+
+  .volunteering {
+    background-color: #fafafa;
+    padding: 72px 0 80px;
+
+    .container {
+      @include container;
+      text-align: center;
+    }
+
+    .title {
+      @include title;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      margin-bottom: 82px;
+    }
+
+    .list {
+
+      .row_list {
+        display: flex;
+        justify-content: space-evenly;
+
+        .list_item {
+          height: 101px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+
+      .row:last-child {
+        margin-top: 80px;
+
+        .row_list {
+          justify-content: space-around;
+          padding: 0 150px;
+        }
+      }
+
+      .caption {
+        @include text(20px, 45px, $light-grey);
+        letter-spacing: 0.06em;
+      }
+    }
+  }
+
+  .donation {
+    padding: 71px 0 86px;
+
+    .container {
+      @include container;
+      display: flex;
+      align-items: center;
+    }
+
+    .section_img {
+      margin-right: 63px;
+    }
+
+    .text_content {
+      width: 380px;
+    }
+
+    .title {
+      @include title;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      margin-bottom: 35px;
+    }
+
+    .text {
+      @include text;
+      line-height: 124%;
+      letter-spacing: 0.06em;
+      margin-bottom: 13px;
+    }
+
+    .bank_card {
+      display: inline-flex;
+      align-items: center;
+      background-color: $pale-pink;
+      border-radius: 9px;
+      padding: 12px 14px;
+      margin-bottom: 33px;
+
+      .card_img {
+        max-height: 22px;
+      }
+
+      .card_number {
+        @include text(20px);
+        font-family: $Times;
+        letter-spacing: 0.06em;
+        margin-left: 15px;
+      }
+    }
+
+    .legal {
+      display: block;
+      width: 353px;
+      @include text(12px, 18px, #b2b2b2);
+      font-family: $Arial;
+      font-style: italic;
+    }
+  }
+}
